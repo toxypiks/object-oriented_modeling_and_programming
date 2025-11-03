@@ -6,7 +6,7 @@ public class Kugel {
     private double radius;
 
     public Kugel(double radius) {
-        this.radius = radius;
+        this.radius = Math.abs(radius);
     };
 
     public double getRadius()
