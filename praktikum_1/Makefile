@@ -1,4 +1,4 @@
-.PHONY: test
+.PHONY: build
 
 testbuild: build
 	java -jar Kugeln.jar
