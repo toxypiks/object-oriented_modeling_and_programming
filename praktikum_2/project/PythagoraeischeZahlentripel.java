@@ -1,5 +1,4 @@
 package project;
-
 import java.lang.Math;
 
 public class PythagoraeischeZahlentripel
@@ -26,16 +25,19 @@ public class PythagoraeischeZahlentripel
 
     public void berechne()
     {
-
+        for(int i = 0; i < this.squared_numbers_to_check.length; i++) {
+            for(int j = 0; j < this.squared_numbers_to_check.length; j++) {
+                    int differenz = squared_numbers_to_check[j] - squared_numbers_to_check[i];
+                    if(istQuadratzahl(differenz) && differenz > squared_numbers_to_check[i]) {
+                        System.out.printf("%d^2 + %d^2 = %d^2", Math.sqrt(squared_numbers_to_check[i]), Math.sqrt(differenz), Math.sqrt(squared_numbers_to_check[j]));
+                            this.found_zahlentripel++;
+                    }
+                }
+        }
     }
 
     public void gibAnzahlAus()
     {
         System.out.printf("Es wurden %d Pythagoräische Zahlentripel gefunden.\n", this.found_zahlentripel);
-    }
-
-    public static void main (String[] args)
-    {
-        System.out.print("Hello from Pytagoras\n");
     }
 }

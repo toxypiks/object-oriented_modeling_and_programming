@@ -1,13 +1,13 @@
 .PHONY: build
 
 testbuild: build
-	java -jar PythagoraeischeZahlentripel.jar
+	java -jar PythagoraeischeZahltripelMain.jar
 
-build: PythagoraeischeZahlentripel.class
-	jar cvfm PythagoraeischeZahlentripel.jar manifest.txt project/PythagoraeischeZahlentripel.class project/UtilsForArrays.class
+build: PythagoraeischeZahltripelMain.class
+	jar cvfm PythagoraeischeZahltripelMain.jar manifest.txt project/PythagoraeischeZahltripelMain.class project/PythagoraeischeZahlentripel.class project/UtilsForArrays.class
 
-test: PythagoraeischeZahlentripel.class
-	java project.PythagoraeischeZahlentripel
+test: PythagoraeischeZahltripelMain.class
+	java project/PythagoraeischeZahltripelMain
 
-PythagoraeischeZahlentripel.class: project/PythagoraeischeZahlentripel.java project/UtilsForArrays.java
-	javac project/PythagoraeischeZahlentripel.java project/UtilsForArrays.java  
+PythagoraeischeZahltripelMain.class: project/PythagoraeischeZahltripelMain.java project/PythagoraeischeZahlentripel.java project/UtilsForArrays.java
+	javac project/PythagoraeischeZahltripelMain.java project/PythagoraeischeZahlentripel.java project/UtilsForArrays.java  
