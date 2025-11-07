@@ -2,9 +2,11 @@ package project;
 import java.util.Arrays;
 import java.lang.Math;
 
-public class UtilsForArrays {
+public class UtilsForArrays
+{
 
-    public static int[] createIntArray(int minimum, int maximum) {
+    public static int[] createIntArray(int minimum, int maximum)
+    {
         int[] new_array = new int[maximum - minimum + 1];
         for(int i = 0; i < new_array.length; i++)
             {
@@ -14,7 +16,8 @@ public class UtilsForArrays {
         return new_array;
     }
 
-    public static int[] quadriere(int[] array_to_square) {
+    public static int[] quadriere(int[] array_to_square)
+    {
         int[] squared_array = new int[array_to_square.length];
         for(int i = 0; i < squared_array.length; ++i)
             {
@@ -23,15 +26,8 @@ public class UtilsForArrays {
         return squared_array;
     }
 
-    public static void arrayInhaltAusgeben(int[] array_to_print) {
+    public static void arrayInhaltAusgeben(int[] array_to_print)
+    {
         System.out.println(Arrays.toString(array_to_print));
-    }
-
-    public static void main (String[] args) {
-        int[] my_array = UtilsForArrays.createIntArray(2, 7);
-        UtilsForArrays.arrayInhaltAusgeben(my_array);
-
-        int[] squared_array = UtilsForArrays.quadriere(my_array);
-        UtilsForArrays.arrayInhaltAusgeben(squared_array);
     }
 }
