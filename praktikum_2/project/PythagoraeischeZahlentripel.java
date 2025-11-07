@@ -25,14 +25,17 @@ public class PythagoraeischeZahlentripel
 
     public void berechne()
     {
-        for(int i = 0; i < this.squared_numbers_to_check.length; i++) {
+        for(int i = 0; i < this.squared_numbers_to_check.length - 1; i++) {
             for(int j = 0; j < this.squared_numbers_to_check.length; j++) {
-                    int differenz = squared_numbers_to_check[j] - squared_numbers_to_check[i];
+                int differenz = squared_numbers_to_check[j] - squared_numbers_to_check[i];
                     if(istQuadratzahl(differenz) && differenz > squared_numbers_to_check[i]) {
-                        System.out.printf("%d^2 + %d^2 = %d^2", Math.sqrt(squared_numbers_to_check[i]), Math.sqrt(differenz), Math.sqrt(squared_numbers_to_check[j]));
-                            this.found_zahlentripel++;
+                        System.out.printf("%.0f^2 + %.0f^2 = %.0f^2\n",
+                                          Math.sqrt(squared_numbers_to_check[i]),
+                                          Math.sqrt(differenz),
+                                          Math.sqrt(squared_numbers_to_check[j]));
+                        this.found_zahlentripel++;
                     }
-                }
+            }
         }
     }
 
