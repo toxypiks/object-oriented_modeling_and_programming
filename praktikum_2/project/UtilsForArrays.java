@@ -14,14 +14,14 @@ public class UtilsForArrays
         return new_array;
     }
 
-    public static int[] quadriere(int[] array_to_square)
+    public static int[] quadriere(int[] numbers_to_square)
     {
-        int[] squared_array = new int[array_to_square.length];
-        for(int i = 0; i < squared_array.length; ++i)
+        int[] squared_numbers = new int[numbers_to_square.length];
+        for(int i = 0; i < squared_numbers.length; ++i)
             {
-                squared_array[i] = (int) Math.pow(array_to_square[i],2);
+                squared_numbers[i] = (int) Math.pow(numbers_to_square[i],2);
             }
-        return squared_array;
+        return squared_numbers;
     }
 
     public static void arrayInhaltAusgeben(int[] array_to_print)
