@@ -19,7 +19,7 @@ public class PythagoraeischeZahlentripel
         if (number < 0) {
             return false; //a squared number can not be negative
         }
-        int sqrt_of_number = (int) Math.sqrt(number);
+        double sqrt_of_number = Math.floor(Math.sqrt(number));
         return sqrt_of_number*sqrt_of_number == number;
     }
 
@@ -27,8 +27,12 @@ public class PythagoraeischeZahlentripel
     {
         for(int i = 0; i < this.squared_numbers_to_check.length - 1; i++) {
             for(int j = 0; j < this.squared_numbers_to_check.length; j++) {
-                int differenz = squared_numbers_to_check[j] - squared_numbers_to_check[i];
+                int differenz = Math.abs(squared_numbers_to_check[j] - squared_numbers_to_check[i]);
                     if(istQuadratzahl(differenz) && differenz > squared_numbers_to_check[i]) {
+                        System.out.printf("\nInhalt des Arrays an der Position i: %d\n", squared_numbers_to_check[i]);
+                        System.out.printf("Inhalt des Arrays an der Position j: %d\n", squared_numbers_to_check[j]);
+                        System.out.printf("differenz = %d\n", differenz);
+                        System.out.print("Ausgabe:\n");
                         System.out.printf("%.0f^2 + %.0f^2 = %.0f^2\n",
                                           Math.sqrt(squared_numbers_to_check[i]),
                                           Math.sqrt(differenz),
@@ -41,6 +45,6 @@ public class PythagoraeischeZahlentripel
 
     public void gibAnzahlAus()
     {
-        System.out.printf("Es wurden %d Pythagoräische Zahlentripel gefunden.\n", this.found_zahlentripel);
+        System.out.printf("\nEs wurden %d Pythagoräische Zahlentripel gefunden.\n", this.found_zahlentripel);
     }
 }
