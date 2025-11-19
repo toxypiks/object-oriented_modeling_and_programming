@@ -11,7 +11,9 @@ public class PythagoraeischeZahlentripel
     {
         this.numbers_to_check = UtilsForArrays.createIntArray(minimum, maximum);
         this.squared_numbers_to_check = UtilsForArrays.quadriere(this.numbers_to_check);
+        System.out.print("Squared numbers to check for Pythagorean triples: \n");
         UtilsForArrays.arrayInhaltAusgeben(this.squared_numbers_to_check);
+        System.out.print("\nFound triples: \n");
         berechne();
     }
 
@@ -30,10 +32,6 @@ public class PythagoraeischeZahlentripel
             for(int j = 0; j < this.squared_numbers_to_check.length; j++) {
                 int differenz = Math.abs(squared_numbers_to_check[j] - squared_numbers_to_check[i]);
                     if(istQuadratzahl(differenz) && differenz > squared_numbers_to_check[i]) {
-                        System.out.printf("\nInhalt des Arrays an der Position i: %d\n", squared_numbers_to_check[i]);
-                        System.out.printf("Inhalt des Arrays an der Position j: %d\n", squared_numbers_to_check[j]);
-                        System.out.printf("differenz = %d\n", differenz);
-                        System.out.print("Ausgabe:\n");
                         System.out.printf("%.0f^2 + %.0f^2 = %.0f^2\n",
                                           Math.sqrt(squared_numbers_to_check[i]),
                                           Math.sqrt(differenz),
@@ -46,6 +44,6 @@ public class PythagoraeischeZahlentripel
 
     public void gibAnzahlAus()
     {
-        System.out.printf("\nEs wurden %d Pythagoräische Zahlentripel gefunden.\n", this.found_zahlentripel);
+        System.out.printf("\nIn total %d Pythagorean triples were found.\n", this.found_zahlentripel);
     }
 }
