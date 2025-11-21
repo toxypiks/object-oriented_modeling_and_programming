@@ -1,6 +1,8 @@
 package project;
 
-public class GeometrischesObjekt
+public interface GeometrischesObjekt
 {
-
+    public double getVolumen();
+    public double getOberflaeche();
+    public String toString();
 }

@@ -1,6 +1,6 @@
 package project;
 
-public class Quader
+public class Quader implements GeometrischesObjekt
 {
     private double laenge;
     private double breite;
@@ -41,16 +41,19 @@ public class Quader
         return this.hoehe;
     }
 
+    @Override
     public double getVolumen()
     {
         return this.laenge*this.breite*this.hoehe;
     }
 
+    @Override
     public double getOberflaeche()
     {
         return (2*this.laenge*this.breite) + (2*this.laenge*this.hoehe) + (2*this.breite*this.hoehe);
     }
 
+    @Override
     public String toString()
     {
         return "Würfel mit" + " Länge = " + this.laenge + " Breite = " + this.breite + " Höhe = " + this.hoehe + " Volumen = " + getVolumen() + " Oberfläche = " + getOberflaeche();
