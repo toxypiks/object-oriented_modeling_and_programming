@@ -12,9 +12,9 @@ public class GeometrischeObjekte
         this.geometrischeObjekte = new ArrayList<GeometrischesObjekt>();
     }
 
-    public boolean add(GeometrischesObjekt geometrischesObjekt)
+    public void add(GeometrischesObjekt geometrischesObjekt)
     {
-        return this.geometrischeObjekte.add(geometrischesObjekt);
+        this.geometrischeObjekte.add(geometrischesObjekt);
     }
 
     private int getAnzahl()
@@ -57,8 +57,8 @@ public class GeometrischeObjekte
             {
                 System.out.println(geometrischeObjekte.get(i).toString());
             }
-        System.out.print(" gesamtes Volumen = " + berechneGesamtesVolumen());
-        System.out.print(" gesamte Oberfläche = " + berechneGesamteOberflaeche());
+        System.out.print("gesamtes Volumen = " + berechneGesamtesVolumen() + "\n");
+        System.out.print("gesamte Oberfläche = " + berechneGesamteOberflaeche() + "\n");
     }
 
 }
