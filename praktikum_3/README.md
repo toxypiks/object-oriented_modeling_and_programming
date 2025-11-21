@@ -10,5 +10,5 @@
   - just test
 - `make testbuild`
   - test built jar file
-- `java -jar PythagoraeischeZahltripelMain.jar`
+- `java -jar GeometrischeObjekteMain.jar`
   - run application after build step
