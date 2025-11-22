@@ -8,14 +8,14 @@ public class Wuerfel implements GeometrischesObjekt
 
     public Wuerfel(double seitenlaenge) throws GeometrischesObjektException {
         if(seitenlaenge < 0) {
-            throw new GeometrischesObjektException("Wuerfel: Parameter Seitenlänge < 0; Wert: " + seitenlaenge + "\n");
+            throw new GeometrischesObjektException("Wuerfel: Parameter Seitenlänge < 0; Wert: " + seitenlaenge);
         }
         else {
             this.seitenlaenge = seitenlaenge;
         }
     }
 
-    private double getSeitenlaenge()
+    public double getSeitenlaenge()
     {
         return this.seitenlaenge;
     }

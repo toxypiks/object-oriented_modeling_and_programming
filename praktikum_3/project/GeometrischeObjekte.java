@@ -52,13 +52,12 @@ public class GeometrischeObjekte
 
     public void ausgeben()
     {
-        System.out.print("Anzahl geometrische Objekte in der Liste = " + getAnzahl() + "\n");
+        System.out.println("Anzahl geometrische Objekte in der Liste = " + getAnzahl());
         for (int i = 0; i < geometrischeObjekte.size(); ++i)
             {
                 System.out.println(geometrischeObjekte.get(i).toString());
             }
-        System.out.print("gesamtes Volumen = " + berechneGesamtesVolumen() + "\n");
-        System.out.print("gesamte Oberfläche = " + berechneGesamteOberflaeche() + "\n");
+        System.out.println("gesamtes Volumen = " + berechneGesamtesVolumen());
+        System.out.println("gesamte Oberfläche = " + berechneGesamteOberflaeche());
     }
-
 }
