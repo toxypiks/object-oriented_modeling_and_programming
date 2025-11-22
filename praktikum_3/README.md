@@ -1,10 +1,12 @@
-# how to build project
+# Topic: Erweiterung, Interfaces, Exceptions, Aggregation
+
+## how to build project
 
 - `make`
   - build jar file
 
 
-# how to run/test project
+## how to run/test project
 
 - `make test`
   - just test
@@ -12,3 +14,5 @@
   - test built jar file
 - `java -jar GeometrischeObjekteMain.jar`
   - run application after build step
+
+![UML diagram](praktikum3.png)
