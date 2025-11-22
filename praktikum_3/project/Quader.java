@@ -7,36 +7,35 @@ public class Quader implements GeometrischesObjekt
     private double hoehe;
 
     public Quader(double laenge, double breite, double hoehe) throws GeometrischesObjektException {
+
         if (laenge < 0) {
-            throw new GeometrischesObjektException("Quader: Parameter ");
+            throw new GeometrischesObjektException("Quader: Parameter Länge < 0; Wert: " + laenge + "\n");
         } else {
             this.laenge = laenge;
         }
-
         if (breite < 0) {
-            throw new GeometrischesObjektException("Quader: Parameter ");
+            throw new GeometrischesObjektException("Quader: Parameter Breite < 0; Wert: " + breite + "\n");
         } else {
             this.breite = breite;
         }
-
         if (hoehe < 0) {
-            throw new GeometrischesObjektException("Quader: Parameter ");
+            throw new GeometrischesObjektException("Quader: Parameter Höhe < 0; Wert:  " + hoehe + "\n");
         } else {
             this.hoehe = hoehe;
         }
     }
 
-    public double getLaenge()
+    private double getLaenge()
     {
         return this.laenge;
     }
 
-    public double getBreite()
+    private double getBreite()
     {
         return this.breite;
     }
 
-    public double getHoehe()
+    private double getHoehe()
     {
         return this.hoehe;
     }

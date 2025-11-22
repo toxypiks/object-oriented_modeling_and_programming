@@ -2,11 +2,13 @@ package project;
 
 public class GeometrischesObjektException extends Exception {
 
-    public GeometrischesObjektException(){
+    public GeometrischesObjektException()
+    {
         super();
     }
 
-    public GeometrischesObjektException (String message) {
-        super("GeometrischesObjekt: " + message);
+    public GeometrischesObjektException(String message)
+    {
+        super("GeometrischesObjekt: " + message + "\n");
     }
 }

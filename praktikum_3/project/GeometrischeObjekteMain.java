@@ -4,18 +4,22 @@ public class GeometrischeObjekteMain
 {
     public static void main (String[] args)
     {
+        GeometrischeObjekte geometrischeObjekte = new GeometrischeObjekte();
         try {
             GeometrischesObjekt objekt1 = new Quader(3,4,5);
-            GeometrischesObjekt objekt2 = new Wuerfel(4);
-
-            GeometrischeObjekte geometrischeObjekte = new GeometrischeObjekte();
             geometrischeObjekte.add(objekt1);
-            geometrischeObjekte.add(objekt2);
-            geometrischeObjekte.ausgeben();
 
         } catch (GeometrischesObjektException e) {
-            System.out.println("Fehler: " + e.getMessage());
+            System.out.println(e.getMessage());
         }
+        try {
+            GeometrischesObjekt objekt2 = new Wuerfel(-4);
+            geometrischeObjekte.add(objekt2);
+
+        } catch (GeometrischesObjektException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+        geometrischeObjekte.ausgeben();
 
     }
 }

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class GeometrischeObjekte
 {
-    private final List<GeometrischesObjekt> geometrischeObjekte;
+    private List<GeometrischesObjekt> geometrischeObjekte;
 
     public GeometrischeObjekte()
     {
