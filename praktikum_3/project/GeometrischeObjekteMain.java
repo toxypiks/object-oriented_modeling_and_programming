@@ -17,7 +17,7 @@ public class GeometrischeObjekteMain
             }
         }
 
-        double[] cubeData = {-207, 15, 4, 200};
+        double[] cubeData = {-207.15, 4, 200};
 
         for(double data: cubeData) {
             try {
