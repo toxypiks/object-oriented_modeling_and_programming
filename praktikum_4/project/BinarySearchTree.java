@@ -7,7 +7,15 @@ public class BinarySearchTree {
 
     public void add(double key)
     {
-        root.add(key);
+        if (this.root == null) {
+            this.root = new BinarySearchTreeNode();
+        }
+        this.root.add(key);
+    }
+
+    public void print_tree()
+    {
+        root.print_tree();
     }
 
     public int getHeight() {
