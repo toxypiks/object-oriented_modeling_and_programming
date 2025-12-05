@@ -1,58 +1,60 @@
 package project;
+import java.util.Arrays;
+import java.lang.Math;
 
 public class BinarySearchTreeNode {
 
-    private BinarySearchTreeNode left = null;
-    private BinarySearchTreeNode right = null;
-    private double key = 0;
+    private BinarySearchTreeNode left;
+    private BinarySearchTreeNode right;
+    public double key;
 
     public BinarySearchTreeNode() {}
 
-    public void add(double key)
+    public void add(double new_key)
     {
-        if (this.left == null && this.right == null) {
-            this.key = key;
-            return;
-        }
-        else if (key < this.key) {
+        if (new_key < this.key) {
             if (this.left == null) {
                 this.left = new BinarySearchTreeNode();
-                this.left.add(key);
-            }
-            else {
-                this.left.add(key);
+                this.left.key = new_key;
+            } else {
+                this.left.add(new_key);
             }
         }
-        else if (key > this.key) {
+        // new_key >= this.key
+        else {
             if (this.right == null) {
                 this.right = new BinarySearchTreeNode();
-                this.right.add(key);
+                this.right.key = new_key;
             }
             else {
-                right.add(key);
+                this.right.add(new_key);
             }
-        }
-    }
-
-    public void print_tree()
-    {
-        if (this.left == null && this.right == null && this.key == 0) {
-            return;
-        }
-        if (this.left != null) {
-            this.left.print_tree();
-        }
-
-        System.out.printf("%f\n", this.key);
-
-        if (this.right != null) {
-            this.right.print_tree();
         }
     }
 
     public int getHeight()
     {
-        //return height of tree
-        return 0;
+        if (this.left == null && this.right == null) {
+            return 1;
+        }
+        if (this.right == null) {
+            return left.getHeight() + 1;
+        }
+        if (this.left == null) {
+            return right.getHeight() + 1;
+        }
+        return Math.max(this.left.getHeight(), this.right.getHeight()) + 1;
+    }
+
+    public void print(int indentation) {
+        char[] spaces = new char[indentation];
+        Arrays.fill(spaces, ' ');
+        System.out.printf(new String(spaces) + "Key: %f Height: %d\n", this.key, this.getHeight());
+        if(this.right != null) {
+            this.right.print(indentation + 2);
+        }
+        if(this.left != null) {
+            this.left.print(indentation + 2);
+        }
     }
 }

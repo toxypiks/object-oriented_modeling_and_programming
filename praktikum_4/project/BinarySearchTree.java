@@ -9,16 +9,30 @@ public class BinarySearchTree {
     {
         if (this.root == null) {
             this.root = new BinarySearchTreeNode();
+            this.root.key = key;
         }
-        this.root.add(key);
+        else {
+            this.root.add(key);
+        }
+
     }
 
-    public void print_tree()
+    public void print()
     {
-        root.print_tree();
+        if (this.root == null) {
+            System.out.println("Empty tree");
+            System.out.println("Height: 0");
+        }
+        else {
+            this.root.print(0);
+        }
     }
 
     public int getHeight() {
-        return root.getHeight();
+        if (this.root == null) {
+            return 0;
+        } else {
+            return this.root.getHeight();
+        }
     }
 }

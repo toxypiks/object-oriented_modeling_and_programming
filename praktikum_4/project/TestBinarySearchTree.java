@@ -10,6 +10,9 @@ public class TestBinarySearchTree
         my_tree.add(23);
         my_tree.add(4);
         my_tree.add(50);
-        my_tree.print_tree();
+        my_tree.add(13);
+        my_tree.add(0);
+        my_tree.add(70);
+        my_tree.print();
     }
 }
