@@ -1,7 +1,7 @@
 package project;
 
 public class BinarySearchTree {
-    private BinarySearchTreeNode root = null;
+    private BinarySearchTreeNode root;
 
     public BinarySearchTree() {}
 
@@ -14,7 +14,14 @@ public class BinarySearchTree {
         else {
             this.root.add(key);
         }
+    }
 
+    public int getHeight() {
+        if (this.root == null) {
+            return 0;
+        } else {
+            return this.root.getHeight();
+        }
     }
 
     public void print()
@@ -25,14 +32,6 @@ public class BinarySearchTree {
         }
         else {
             this.root.print(0);
-        }
-    }
-
-    public int getHeight() {
-        if (this.root == null) {
-            return 0;
-        } else {
-            return this.root.getHeight();
         }
     }
 }

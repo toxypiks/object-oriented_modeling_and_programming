@@ -12,22 +12,22 @@ public class BinarySearchTreeNode {
 
     public void add(double new_key)
     {
-        if (new_key < this.key) {
-            if (this.left == null) {
-                this.left = new BinarySearchTreeNode();
-                this.left.key = new_key;
-            } else {
-                this.left.add(new_key);
-            }
-        }
-        // new_key >= this.key
-        else {
+        if (new_key > this.key) {
             if (this.right == null) {
                 this.right = new BinarySearchTreeNode();
                 this.right.key = new_key;
             }
             else {
                 this.right.add(new_key);
+            }
+        }
+
+        if (new_key < this.key) {
+            if (this.left == null) {
+                this.left = new BinarySearchTreeNode();
+                this.left.key = new_key;
+            } else {
+                this.left.add(new_key);
             }
         }
     }
