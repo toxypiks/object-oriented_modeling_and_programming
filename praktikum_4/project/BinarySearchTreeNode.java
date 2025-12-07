@@ -22,7 +22,7 @@ public class BinarySearchTreeNode {
             }
         }
 
-        if (new_key < this.key) {
+        else if (new_key < this.key) {
             if (this.left == null) {
                 this.left = new BinarySearchTreeNode();
                 this.left.key = new_key;
