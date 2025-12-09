@@ -7,11 +7,11 @@ public class TestBinarySearchTree
         BinarySearchTree tree_one = new BinarySearchTree();
         tree_one.add(50.0);
         tree_one.add(25.0);
-        tree_one.add(37.5);
-        tree_one.add(50.0);
-        tree_one.add(62.5);
         tree_one.add(75.0);
+        tree_one.add(12.5);
         tree_one.add(87.5);
+        tree_one.add(37.5);
+        tree_one.add(62.5);
 
         System.out.printf("Height of tree one: %d\n", tree_one.getHeight());
 
