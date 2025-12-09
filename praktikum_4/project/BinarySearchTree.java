@@ -23,15 +23,4 @@ public class BinarySearchTree {
             return this.root.getHeight();
         }
     }
-
-    public void print()
-    {
-        if (this.root == null) {
-            System.out.println("Empty tree");
-            System.out.println("Height: 0");
-        }
-        else {
-            this.root.print(0);
-        }
-    }
 }

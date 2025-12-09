@@ -45,16 +45,4 @@ public class BinarySearchTreeNode {
         }
         return Math.max(this.left.getHeight(), this.right.getHeight()) + 1;
     }
-
-    public void print(int indentation) {
-        char[] spaces = new char[indentation];
-        Arrays.fill(spaces, ' ');
-        System.out.printf(new String(spaces) + "Key: %f Height: %d\n", this.key, this.getHeight());
-        if(this.right != null) {
-            this.right.print(indentation + 2);
-        }
-        if(this.left != null) {
-            this.left.print(indentation + 2);
-        }
-    }
 }
