@@ -4,5 +4,4 @@ public interface GeometrischesObjekt
 {
     public double getVolumen();
     public double getOberflaeche();
-    public String toString();
 }

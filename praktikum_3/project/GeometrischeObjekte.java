@@ -22,12 +22,7 @@ public class GeometrischeObjekte
         if (this.geometrischeObjekte == null) {
             return 0;
         }
-        int counter = 0;
-        for (int i = 0; i < geometrischeObjekte.size(); ++i)
-            {
-                counter++;
-            }
-        return counter;
+        return geometrischeObjekte.size();
     }
 
     private double berechneGesamtesVolumen()
