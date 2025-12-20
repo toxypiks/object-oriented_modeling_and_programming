@@ -54,10 +54,7 @@ public class ThreadpoolBasedGame
         final List<CompletableFuture<Player>> aufgabenErgebnisse = new ArrayList<>();
         for (Player player : arrayOfPlayer)
             {
-                final CompletableFuture<Player> aufgabeCompletableFuture = CompletableFuture.supplyAsync (
-                                                                                                                 player::play,
-                                                                                                                 executorService
-                                                                                                                 );
+                final CompletableFuture<Player> aufgabeCompletableFuture = CompletableFuture.supplyAsync (player::play, executorService);
                 aufgabenErgebnisse.add(aufgabeCompletableFuture);
             }
         return aufgabenErgebnisse;
@@ -79,9 +76,9 @@ public class ThreadpoolBasedGame
 
     public Player[] rank(Player[] playerToRank)
     {
-        for(int i = 0; i < playerToRank.length - 2; i++)
+        for(int i = 0; i <= playerToRank.length - 1; i++)
             {
-                for(int j = 0; j < playerToRank.length - 1; j++)
+                for(int j = 1; j <= playerToRank.length - 1; j++)
                     {
                         if(istSchlechter(playerToRank[i], playerToRank[j]))
                             {
