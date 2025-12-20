@@ -1,8 +1,8 @@
 package project;
 import java.util.SortedMap;
 
-public interface WurfStatistik<K,V> extends SortedMap<K,V>
+public interface WurfStatistik extends SortedMap<Integer, Integer>
 {
-    void wurf(K key);
+    public void wurf(Integer augenzahl);
 
 }
