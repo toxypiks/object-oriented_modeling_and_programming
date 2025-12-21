@@ -21,19 +21,24 @@ public class ThreadpoolBasedGame
 
     public static Player[] play()
     {
-        // Create Thread pool
+        // Create Thread pool with fiixed numbers of threads
         final ExecutorService executorService = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
         try {
+            // Create array of tasks
             final Player[] aufgaben = createTasks();
 
+            // Schedule tasks
             final List<CompletableFuture<Player>> aufgabenErgebnisse = scheduleTasks(executorService, aufgaben);
 
+            // Waiting for all tasks to finish
             aufgabenErgebnisse.forEach(CompletableFuture::join);
 
+            // Combine results of all tasks
             final Player[] result = combineResults(aufgabenErgebnisse);
 
             return result;
         } finally {
+            // Shutdown Threadpool
             executorService.shutdown();
         }
     }
@@ -54,7 +59,10 @@ public class ThreadpoolBasedGame
         final List<CompletableFuture<Player>> aufgabenErgebnisse = new ArrayList<>();
         for (Player player : arrayOfPlayer)
             {
+                // Start tasks
                 final CompletableFuture<Player> aufgabeCompletableFuture = CompletableFuture.supplyAsync (player::play, executorService);
+
+                // Add tasks to list of tasks
                 aufgabenErgebnisse.add(aufgabeCompletableFuture);
             }
         return aufgabenErgebnisse;
