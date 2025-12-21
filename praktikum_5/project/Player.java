@@ -3,23 +3,23 @@ package project;
 public class Player
 {
     private String name;
-    private int number_rolls;
-    private WurfStatistik wurfstatistik;
+    private int anzahl_wuerfe;
+    private WurfStatistik wurfStatistik;
 
-    public Player(String name, int number_rolls)
+    public Player(String name, int anzahl_wuerfe)
     {
         this.name = name;
-        this.number_rolls = number_rolls;
-        this.wurfstatistik = new WurfStatistikImplementation();
+        this.anzahl_wuerfe = anzahl_wuerfe;
+        this.wurfStatistik = new WurfStatistikImplementation();
     }
 
     public Player play()
     {
-        for(int i = 0; i < number_rolls; i++)
+        for(int i = 0; i < anzahl_wuerfe; i++)
             {
                 // Math.random >= 0.0 and < 1.0 * 6 = >= 0.0 and < 6.0 + 1 to include 6 and start from 1
                 int roll = (int) (Math.floor(Math.random() * 6) + 1);
-                this.wurfstatistik.wurf(roll);
+                this.wurfStatistik.wurf(roll);
             }
         return this;
     }
@@ -31,12 +31,12 @@ public class Player
 
     public WurfStatistik getWurfStatistik()
     {
-        return this.wurfstatistik;
+        return this.wurfStatistik;
     }
 
     @Override
     public String toString()
     {
-        return "Player name: " + this.name + " Wurfstatistik: " + this.wurfstatistik.toString() + "\n";
+        return "Name: " + this.name + " Wurfstatistik: " + this.wurfStatistik.toString() + "\n";
     }
 }
