@@ -9,7 +9,7 @@ public class Spiel
         ThreadpoolBasedGame game = new ThreadpoolBasedGame(5, 100);
         Player[] player = game.play();
         Player[] ranked_player = game.rank(player);
-        for(int i = ranked_player.length -10; i < ranked_player.length; i++)
+        for(int i = 0; i < ranked_player.length; i++)
             {
                 System.out.println(ranked_player[i].toString());
             }

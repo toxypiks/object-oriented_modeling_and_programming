@@ -86,7 +86,7 @@ public class ThreadpoolBasedGame
     {
         for(int i = 0; i <= playerToRank.length - 1; i++)
             {
-                for(int j = 1; j <= playerToRank.length - 1; j++)
+                for(int j = i; j <= playerToRank.length - 1; j++)
                     {
                         if(istSchlechter(playerToRank[i], playerToRank[j]))
                             {

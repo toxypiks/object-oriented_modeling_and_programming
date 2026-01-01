@@ -40,7 +40,7 @@ public class Player
     @Override
     public String toString()
     {
-        String result = "Player: " + name + "\n";
+        String result = this.name + ":\n";
 
         Iterator<Map.Entry<Integer, Integer>> it =
             wurfStatistik.entrySet().iterator();
