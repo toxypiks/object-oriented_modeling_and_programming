@@ -1,5 +1,8 @@
 package project;
 
+import java.util.Iterator;
+import java.util.Map;
+
 public class Player
 {
     private String name;
@@ -37,6 +40,16 @@ public class Player
     @Override
     public String toString()
     {
-        return "Name: " + this.name + " Wurfstatistik: " + this.wurfStatistik.toString() + "\n";
+        String result = "Player: " + name + "\n";
+
+        Iterator<Map.Entry<Integer, Integer>> it =
+            wurfStatistik.entrySet().iterator();
+
+        while (it.hasNext()) {
+            Map.Entry<Integer, Integer> entry = it.next();
+            result += entry.getKey() + ": " + entry.getValue() + "\n";
+        }
+
+        return result;
     }
 }
