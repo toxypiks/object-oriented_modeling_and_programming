@@ -121,6 +121,6 @@ public class ThreadpoolBasedGame
     public boolean istSchlechter(Player playerOne, Player playerTwo)
     {
         int result = compare(playerOne, playerTwo);
-        return (result < 0) ? true : false;
+        return (result < 0);
     }
 }
