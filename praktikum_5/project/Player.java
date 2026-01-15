@@ -6,19 +6,19 @@ import java.util.Map;
 public class Player
 {
     private String name;
-    private int anzahl_wuerfe;
+    private int anzahlWuerfe;
     private WurfStatistik wurfStatistik;
 
-    public Player(String name, int anzahl_wuerfe)
+    public Player(String name, int anzahlWuerfe)
     {
         this.name = name;
-        this.anzahl_wuerfe = anzahl_wuerfe;
+        this.anzahlWuerfe = anzahlWuerfe;
         this.wurfStatistik = new WurfStatistikImplementation();
     }
 
     public Player play()
     {
-        for(int i = 0; i < anzahl_wuerfe; i++)
+        for(int i = 0; i < anzahlWuerfe; i++)
             {
                 // Math.random >= 0.0 and < 1.0 * 6 = >= 0.0 and < 6.0 + 1 to include 6 and start from 1
                 int roll = (int) (Math.floor(Math.random() * 6) + 1);
