@@ -84,7 +84,7 @@ public class ThreadpoolBasedGame
 
     public Player[] rank(Player[] playerToRank)
     {
-        for(int i = 0; i <= playerToRank.length - 1; i++)
+        for(int i = 0; i <= playerToRank.length - 2; i++)
             {
                 for(int j = i; j <= playerToRank.length - 1; j++)
                     {
