@@ -15,8 +15,8 @@ public class ThreadpoolBasedGame
 
     public ThreadpoolBasedGame(final int numberOfThreads, final int numberOfTasks)
     {
-        this.NUMBER_OF_THREADS = numberOfThreads;
-        this.NUMBER_OF_TASKS = numberOfTasks;
+        ThreadpoolBasedGame.NUMBER_OF_THREADS = numberOfThreads;
+        ThreadpoolBasedGame.NUMBER_OF_TASKS = numberOfTasks;
     }
 
     public static Player[] play()
